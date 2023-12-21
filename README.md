@@ -1,0 +1,1 @@
+I've created my own solution to send email via PHP. Technologies i used: PHP, OOP, Composer(PHPMailer, env), jQuery, HTML, SCSS,
