@@ -1,1 +1,1 @@
-I've created my own solution to send email via PHP. Technologies i used: PHP, OOP, Composer(PHPMailer, env), jQuery, HTML, SCSS,
+"This simple solution sends an email through a form to any address chosen by the user and saves the data to a MySQL database."
