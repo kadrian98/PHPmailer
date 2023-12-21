@@ -1,0 +1,5 @@
+.env
+phpmailerfile.php
+nbproject/
+phpmailer/
+vendor/
