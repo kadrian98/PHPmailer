@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $("#sendingForm").submit(function (event) {
     event.preventDefault();
-    $(".errorPara").remove();
+
     var form = $(this);
     var actionUrl = form.attr('action');
 
@@ -13,14 +13,17 @@ $(document).ready(function () {
       success: function(data) {
         if (data.message) {
           $("#sendingForm").after("<h1>" + data.message + "</h1>");
-          $("#sendingForm").trigger("reset");          
+          $("#sendingForm").trigger("reset");
+          $(".errorPara").remove();
         } else {
           $("#sendingForm").after("<h1>Received an unexpected response</h1>");
         }
       },
       error: function (jqXHR, textStatus, errorThrown) {
         if (jqXHR.responseJSON && jqXHR.responseJSON.errors) {
-        var errors = jqXHR.responseJSON.errors;   
+        var errors = jqXHR.responseJSON.errors;
+
+        $(".errorPara").remove();
 
     Object.keys(errors).forEach(function(key) {
       var message = errors[key];
